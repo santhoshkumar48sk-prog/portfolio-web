@@ -1,12 +1,10 @@
 console.log("Portfolio Loaded");
 
 document.querySelectorAll(".card").forEach(card=>{
-    card.addEventListener("click",()=>{
-        alert("Project Section Coming Soon");
-    });
+ 
+ 
+ 
 });
- 
- 
 const btn = document.getElementById("themeBtn");
 
 if(localStorage.getItem("theme") === "light"){
@@ -24,4 +22,14 @@ btn.addEventListener("click", () => {
         localStorage.setItem("theme","dark");
     }
 
+});
+ function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+ 
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 });

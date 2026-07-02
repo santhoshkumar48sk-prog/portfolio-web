@@ -9,12 +9,15 @@ body{
     background:#111827;
     color:white;
 }
+.card h2{
+    color: #00e5ff;
+}
 
 nav{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 50px 30px;
     background:#1f2937;
 }
 
@@ -22,12 +25,14 @@ nav{
     font-size:28px;
     font-weight:bold;
     color:#00e5ff;
+    
 }
 
 nav ul{
     list-style:none;
     display:flex;
-    gap:20px;
+    gap:30px;
+    
 }
 
 nav a{
@@ -40,7 +45,7 @@ nav a:hover{
 }
 
 .hero{
-    height:80vh;
+    height:10%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -55,11 +60,12 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:60px;
+    font: size 100px;;
 }
 
 .hero h2{
-    margin:15px 0;
+    margin:10% 0;
+    color: #00e5ff;
 }
 
 .btn{
@@ -72,31 +78,38 @@ nav a:hover{
     border-radius:30px;
 }
 
-.cards{
+ .cards{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:20px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1200px;
+    margin:0 auto;
 }
 
-.card{
-    background:#1f2937;
-    padding:30px;
-    text-align:center;
+  .card{
+    background:var(--card-color);
+    color:var(--text-color);
+    padding:25px;
     border-radius:15px;
-    transition:0.4s;
+    text-align:center;
+    transition:all 0.4s ease;
+    cursor:pointer;
+    border:2px solid transparent;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-12px) scale(1.03);
+    border:2px solid #00e5ff;
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px rgba(0,229,255,0.8);
 }
-
 .card i{
-    font-size:50px;
+    font-size:250% ;
     color:#00e5ff;
-    margin-bottom:15px;
+    margin-bottom:8%;
 }
 
 footer{
@@ -105,7 +118,7 @@ footer{
     background:#1f2937;
 }
 .page{
-    padding:50px;
+    padding:0%;
     text-align:center;
 }
 
@@ -159,9 +172,11 @@ body{
 #themeBtn{
     padding:10px 15px;
     border:none;
+     
     border-radius:50%;
     cursor:pointer;
-    font-size:18px;
+    font-size:10px;
+    
 }
 :root{
     --bg-color:#111827;
@@ -192,4 +207,112 @@ nav{
 
 nav a{
     color:var(--text-color);
+}
+  
+.nav-links li{
+
+    margin:20px 0;
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#494949;
+    color:white;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:0%;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+ 
+@media (max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:#222;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        text-align:center;
+        padding:15px 0;
+        margin:0;
+    }
+  
+}
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-block;
+    margin:0 15px;
+    font-size:40px;
+    color:white;
+    transition:0.4s ease;
+}
+
+.social-icons a:hover{
+    color:#00e5ff;
+    transform:translateY(-8px) scale(1.2);
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 30px #00e5ff;
+}
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#00bfff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin-right:10px;
+}
+
+.btn:hover{
+    background:#68c4df;
 }
