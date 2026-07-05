@@ -17,7 +17,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15 px 30px;
     background:#1f2937;
 }
 
@@ -318,3 +318,42 @@ nav a{
 .btn:hover{
     background:#68c4df;
 }
+footer{
+    padding:40px 20px;
+}
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:20px 0;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#00d9ff;
+}
+ .social-icons{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:25px 0;
+}
+
+.social-icons a{
+    font-size:40px;
+    color:white;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    color:#00d9ff;
+    transform:translateY(-5px);
+}
+ 
